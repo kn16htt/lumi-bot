@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: lumi-bot
+    runtime: python
+    plan: free
+    buildCommand: ""
+    startCommand: "python lumi_bot.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: AI_KEY
+        sync: false
+      - key: AI_PROVIDER
+        value: groq
+      - key: PYTHON_VERSION
+        value: "3.11.9"
